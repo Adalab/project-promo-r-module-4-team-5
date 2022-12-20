@@ -26,5 +26,9 @@ server.post("/card", (req, res) => {
     success: true,
   };
   //respuesta si falla algún campo
-  res.json(responseSuccess);
+  const responseError = {
+    error: "SERVER ERROR: imagen demasiado grande",
+    success: false,
+  };
+  responseSuccess.success ? res.json(responseSuccess) : res.json(responseError);
 });
