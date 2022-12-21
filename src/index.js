@@ -55,3 +55,14 @@ server.post('/card', (req, res) => {
 
 const staticServerPathWeb = './src/public-react';
 server.use(express.static(staticServerPathWeb));
+
+// Endpoint para gestionar los errores 404
+server.get('*', (req, res) => {
+  // Relativo a este directorio
+  const notFoundFileRelativePath = '../src/public-react/404-not-found.html';
+  const notFoundFileAbsolutePath = path.join(
+    __dirname,
+    notFoundFileRelativePath
+  );
+  res.status(404).sendFile(notFoundFileAbsolutePath);
+});
