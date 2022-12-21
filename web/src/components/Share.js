@@ -1,4 +1,4 @@
-import '../styles/components/Share.scss';
+import "../styles/components/Share.scss";
 
 const Share = (props) => {
   const handleCreateButton = (ev) => {
@@ -9,7 +9,6 @@ const Share = (props) => {
     if (props.dataResult.success === true) {
       return (
         <>
-          {console.log(props)}
           <div className="line"></div>
           <div className="card-created-success js-created-success">
             <div className="card-created js-card-created">
@@ -24,7 +23,7 @@ const Share = (props) => {
               >
                 {props.dataResult.success
                   ? props.dataResult.cardURL
-                  : 'error, no se ha podido crear tu tarjeta'}
+                  : "error, no se ha podido crear tu tarjeta"}
               </a>
             </div>
             <div className="share-twitter">
@@ -60,7 +59,7 @@ const Share = (props) => {
         <div className="js-eventShare">
           <i
             className={`js-share-down form-arrow fa-solid fa-wand-sparkles ${
-              props.collapsShare ? 'rotate' : null
+              props.collapsShare ? "rotate" : null
             } `}
             onClick={props.handleShare}
           ></i>

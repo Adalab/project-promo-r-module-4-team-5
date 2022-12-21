@@ -69,7 +69,6 @@ function App() {
   //  USE EFFECT PARA EL LOCAL STORAGE
 
   useEffect(() => {
-    console.log(userData.photo);
     ls.set("userDataLs", userData);
   }, [userData]);
 
