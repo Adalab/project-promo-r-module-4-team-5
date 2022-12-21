@@ -1,19 +1,19 @@
-import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
-import alohomoraLogo from "../images/card.png";
-import adalabLogo from "../images/adalab.png";
+import { Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import alohomoraLogo from '../images/card.png';
+import adalabLogo from '../images/adalab.png';
 //STYLES
-import "../styles/main.scss";
+import '../styles/main.scss';
 //COMPONENTS
-import Api from "../services/Api";
-import Card from "./Card";
-import Header from "./Header";
-import Footer from "./Footer";
-import Landing from "./Landing";
-import ls from "../services/LocalStorage";
+import Api from '../services/Api';
+import Card from './Card';
+import Header from './Header';
+import Footer from './Footer';
+import Landing from './Landing';
+import ls from '../services/LocalStorage';
 
 function App() {
-  const [avatar, setAvatar] = useState("");
+  const [avatar, setAvatar] = useState('');
   const updateAvatar = (avatar) => {
     setUserData({
       ...userData,
@@ -23,19 +23,19 @@ function App() {
   };
 
   const [userData, setUserData] = useState(
-    ls.get("userDataLs", {
-      palette: "1",
-      name: "",
-      job: "",
-      photo: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-      github: "",
+    ls.get('userDataLs', {
+      palette: '1',
+      name: '',
+      job: '',
+      photo: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
     })
   );
 
-  const [dataResult, setDataResult] = useState("");
+  const [dataResult, setDataResult] = useState('');
   console.log(dataResult);
 
   // Collapsables.
@@ -69,22 +69,22 @@ function App() {
   //  USE EFFECT PARA EL LOCAL STORAGE
 
   useEffect(() => {
-    ls.set("userDataLs", userData);
+    ls.set('userDataLs', userData);
   }, [userData]);
 
   const handleReset = () => {
     setUserData({
-      name: "",
-      palette: "1",
-      job: "",
-      photo: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-      github: "",
+      name: '',
+      palette: '1',
+      job: '',
+      photo: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
     });
-    setAvatar("");
-    setDataResult("");
+    setAvatar('');
+    setDataResult('');
   };
 
   const handleCreateCard = () => {
@@ -95,27 +95,29 @@ function App() {
 
   return (
     <div className="App">
-      <Header image={alohomoraLogo}></Header>
       <Routes>
         <Route path="/" element={<Landing alohomoraLogo={alohomoraLogo} />} />
         <Route
           path="/card"
           element={
-            <Card
-              handleReset={handleReset}
-              handleInput={handleInput}
-              handleDesign={handleDesign}
-              handleForm={handleForm}
-              handleCreateCard={handleCreateCard}
-              handleShare={handleShare}
-              userData={userData}
-              updateAvatar={updateAvatar}
-              avatar={avatar}
-              dataResult={dataResult}
-              collapsDesign={collapsDesign}
-              collapsForm={collapsForm}
-              collapsShare={collapsShare}
-            />
+            <>
+              <Header image={alohomoraLogo} />
+              <Card
+                handleReset={handleReset}
+                handleInput={handleInput}
+                handleDesign={handleDesign}
+                handleForm={handleForm}
+                handleCreateCard={handleCreateCard}
+                handleShare={handleShare}
+                userData={userData}
+                updateAvatar={updateAvatar}
+                avatar={avatar}
+                dataResult={dataResult}
+                collapsDesign={collapsDesign}
+                collapsForm={collapsForm}
+                collapsShare={collapsShare}
+              />
+            </>
           }
         />
       </Routes>
