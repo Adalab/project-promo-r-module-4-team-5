@@ -10,6 +10,8 @@ const cors = require('cors');
 
 // Creamos el servidor
 const server = express();
+//Configurador motor de plantillas ejs
+server.set('view engine', 'ejs');
 
 // Configuramos el servidor
 server.use(cors());
@@ -49,6 +51,20 @@ server.post('/card', (req, res) => {
     };
     res.json(responseSuccess);
   }
+});
+server.get('/card/:cardId', (req, res) => {
+  console.log(req.params);
+  res.render({});
+  // 'card', {
+  //   palette: req.params.palette,
+  //   name: req.params.name,
+  //   job: req.params.job,
+  //   photo: req.params.photo,
+  //   phone: req.params.phone,
+  //   email: req.params.email,
+  //   linkedin: req.params.linkedin,
+  //   github: req.params.github,
+  // });
 });
 
 //FALTA POR AÑADIR ERROR TAMAÑO FOTO
