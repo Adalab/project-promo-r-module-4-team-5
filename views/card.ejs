@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <article className={`card__article colorsPalette-<%=palette %> `}>
+    <article class="card__article colorsPalette-<%= palette %>">
         <div class="card__article--data preview-header">
             <h2 class="name js-preview-name">
                 <%= name %>
@@ -18,20 +18,18 @@
                 <%= job %>
             </p>
         </div>
-        <Profile avatar={props.photo ? props.photo : props.avatar} />
+        <img class="card__article--photo js__profile-image" src="<%= photo %>"></img>
         <nav class="card__article--links">
-            <a href={`tel:${props.phone}`} class="preview-icon js-preview-phone">
+            <a href="<%= phone %>" class="preview-icon js-preview-phone">
                 <i class="fa-solid fa-mobile-screen-button icon"></i>
             </a>
-            <a href={`mailto:${props.email}`} class="preview-icon js-preview-email">
+            <a href="<%= email %>" class="preview-icon js-preview-email">
                 <i class="fa-regular fa-envelope icon"></i>
             </a>
-            <a href={`https://www.linkedin.com/in/${props.linkedin}`} class="preview-icon js-preview-linkedin"
-                target="_blank" rel="noreferrer">
+            <a href="<%= linkedin %>" class="preview-icon js-preview-linkedin" target="_blank" rel="noreferrer">
                 <i class="fa-brands fa-linkedin-in icon"></i>
             </a>
-            <a href={`https://github.com/${props.github}`} class="preview-icon js-preview-github" target="_blank"
-                rel="noreferrer">
+            <a href="<%= github %>" class="preview-icon js-preview-github" target="_blank" rel="noreferrer">
                 <i class="fa-brands fa-github-alt icon"></i>
             </a>
         </nav>
