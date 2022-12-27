@@ -1,9 +1,9 @@
 // Fichero src/index.js
 
 //random number para el id
-// const randomId = () => {
-//   return Math.random();
-// };
+const randomId = () => {
+  return Math.random();
+};
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require("express");
 const cors = require("cors");
@@ -23,7 +23,7 @@ server.use(express.json({ limit: "25mb" }));
 const db = new Database("./src/db/database.db", { verbose: console.log });
 
 // Arrancamos el servidor en el puerto 4000
-const serverPort = process.env.PORT || 4000;
+const serverPort = 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -46,7 +46,7 @@ server.post("/card", (req, res) => {
     res.json(responseError);
   } else {
     const newCard = {
-      // id: randomId(),
+      id: randomId(),
       ...req.body,
     };
     // savedCards.push(newCard);
@@ -68,7 +68,7 @@ server.post("/card", (req, res) => {
     //PROBARLO EN POSTMAN
     //AÑADIRLE LASTINSERTROWID
     const responseSuccess = {
-      cardURL: `https://project-promo-r-module-4-team-5-production.up.railway.app/card/${result.lastInsertRowid}`,
+      cardURL: `http://localhost:4000/card/${newCard.id}`,
       success: true,
     };
     res.json(responseSuccess);
