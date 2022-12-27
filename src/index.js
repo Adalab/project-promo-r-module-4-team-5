@@ -88,3 +88,6 @@ server.get("/card/:id", (req, res) => {
 
 const staticServerPathWeb = "./src/public-react";
 server.use(express.static(staticServerPathWeb));
+
+const staticStylesTemplate = "./src/public-styles";
+server.use(express.static(staticStylesTemplate));
