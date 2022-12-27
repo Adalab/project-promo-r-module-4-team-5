@@ -59,7 +59,7 @@ server.post('/card', (req, res) => {
 });
 server.get('/card/:id', (req, res) => {
   const id = req.params.id;
-  const query = db.prepare('SELECT * FROM cards WHERE id = ?');
+  const query = db.prepare('SELECT * FROM card WHERE id = ?');
   const userCard = query.get(id);
   res.render('card', userCard);
   console.log(userCard);
@@ -71,14 +71,3 @@ server.get('/card/:id', (req, res) => {
 
 const staticServerPathWeb = './src/public-react';
 server.use(express.static(staticServerPathWeb));
-
-// Endpoint para gestionar los errores 404
-server.get('*', (req, res) => {
-  // Relativo a este directorio
-  const notFoundFileRelativePath = '../src/public-react/404-not-found.html';
-  const notFoundFileAbsolutePath = path.join(
-    __dirname,
-    notFoundFileRelativePath
-  );
-  res.status(404).sendFile(notFoundFileAbsolutePath);
-});
