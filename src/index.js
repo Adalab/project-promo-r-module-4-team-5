@@ -52,19 +52,12 @@ server.post('/card', (req, res) => {
     res.json(responseSuccess);
   }
 });
-server.get('/card/:cardId', (req, res) => {
-  console.log(req.params);
-  res.render({});
-  // 'card', {
-  //   palette: req.params.palette,
-  //   name: req.params.name,
-  //   job: req.params.job,
-  //   photo: req.params.photo,
-  //   phone: req.params.phone,
-  //   email: req.params.email,
-  //   linkedin: req.params.linkedin,
-  //   github: req.params.github,
-  // });
+server.get('/card/:id', (req, res) => {
+  const id = req.params.id;
+  const query = db.prepare('SELECT * FROM cards WHERE id = ?');
+  const userCard = query.get(id);
+  res.render('card', userCard);
+  console.log(userCard);
 });
 
 //FALTA POR AÑADIR ERROR TAMAÑO FOTO
