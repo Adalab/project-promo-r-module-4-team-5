@@ -74,29 +74,12 @@ server.post('/card', (req, res) => {
     res.json(responseSuccess);
   }
 });
-<<<<<<< HEAD
-
-server.get('/card/:cardId', (req, res) => {
-  console.log(req.params);
-  res.render({});
-  // 'card', {
-  //   palette: req.params.palette,
-  //   name: req.params.name,
-  //   job: req.params.job,
-  //   photo: req.params.photo,
-  //   phone: req.params.phone,
-  //   email: req.params.email,
-  //   linkedin: req.params.linkedin,
-  //   github: req.params.github,
-  // });
-=======
 server.get('/card/:id', (req, res) => {
   const id = req.params.id;
   const query = db.prepare('SELECT * FROM card WHERE id = ?');
   const userCard = query.get(id);
   res.render('card', userCard);
   console.log(userCard);
->>>>>>> nayra
 });
 
 //// NO NOS RENDERIZA NADA DE NADA
@@ -105,17 +88,3 @@ server.get('/card/:id', (req, res) => {
 
 const staticServerPathWeb = './src/public-react';
 server.use(express.static(staticServerPathWeb));
-<<<<<<< HEAD
-
-// Endpoint para gestionar los errores 404
-server.get('*', (req, res) => {
-  // Relativo a este directorio
-  const notFoundFileRelativePath = '../src/public-react/404-not-found.html';
-  const notFoundFileAbsolutePath = path.join(
-    __dirname,
-    notFoundFileRelativePath
-  );
-  res.status(404).sendFile(notFoundFileAbsolutePath);
-});
-=======
->>>>>>> nayra
