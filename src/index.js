@@ -52,7 +52,7 @@ server.post('/card', (req, res) => {
     // savedCards.push(newCard);
     //INSERT
     const insertStn = db.prepare(
-      'INSERT INTO card (palette, name, email, image, phone, linkedin, github, job) VALUES (?,?,?,?,?,?,?,?)'
+      'INSERT INTO card (palette, name, email, photo, phone, linkedin, github, job) VALUES (?,?,?,?,?,?,?,?)'
     );
     const result = insertStn.run(
       newCard.palette,
