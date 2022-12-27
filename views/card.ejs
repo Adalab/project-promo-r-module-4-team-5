@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tarjeta generada por el servidor</title>
-</head>
+  </head>
 
-<body>
-    <article className={`card__article colorsPalette-<%=palette %> `}>
-        <div class="card__article--data preview-header">
-            <h2 class="name js-preview-name">
-                <%= name %>
-            </h2>
-            <p class="text js-preview-job">
-                <%= job %>
-            </p>
-        </div>
-        <Profile avatar={props.photo ? props.photo : props.avatar} />
-        <nav class="card__article--links">
-            <a href={`tel:${props.phone}`} class="preview-icon js-preview-phone">
-                <i class="fa-solid fa-mobile-screen-button icon"></i>
-            </a>
-            <a href={`mailto:${props.email}`} class="preview-icon js-preview-email">
-                <i class="fa-regular fa-envelope icon"></i>
-            </a>
-            <a href={`https://www.linkedin.com/in/${props.linkedin}`} class="preview-icon js-preview-linkedin"
-                target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-linkedin-in icon"></i>
-            </a>
-            <a href={`https://github.com/${props.github}`} class="preview-icon js-preview-github" target="_blank"
-                rel="noreferrer">
-                <i class="fa-brands fa-github-alt icon"></i>
-            </a>
-        </nav>
+  <body>
+    <article class="card__article colors<%= palette %>">
+      <div class="card__article--data preview-header">
+        <h2 class="name js-preview-name"><%= name %></h2>
+
+        <p class="text js-preview-job"><%= job %></p>
+      </div>
+      <div
+        class="card__article--photo js__profile-image"
+        style="
+          background-image: url('/static/media/giphy.harry.407c82de6bbc0220c696.gif');
+        "
+      ></div>
+      <nav class="card__article--links">
+        <a href="tel:" class="preview-icon js-preview-phone"
+          ><i class="fa-solid fa-mobile-screen-button icon"></i></a
+        ><a href="mailto:" class="preview-icon js-preview-email"
+          ><i class="fa-regular fa-envelope icon"></i></a
+        ><a
+          href="https://www.linkedin.com/in/"
+          class="preview-icon js-preview-linkedin"
+          target="_blank"
+          rel="noreferrer"
+          ><i class="fa-brands fa-linkedin-in icon"></i></a
+        ><a
+          href="https://github.com/"
+          class="preview-icon js-preview-github"
+          target="_blank"
+          rel="noreferrer"
+          ><i class="fa-brands fa-github-alt icon"></i
+        ></a>
+      </nav>
     </article>
-</body>
-
+  </body>
 </html>
