@@ -1,11 +1,11 @@
 const Api = (data) => {
   return fetch(
-    'https://project-promo-r-module-4-team-5-production.up.railway.app/card',
+    "https://project-promo-r-module-4-team-5-production.up.railway.app/card",
     {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify(data),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     }
   )
