@@ -8,6 +8,8 @@ const randomId = () => {
 const express = require('express');
 const cors = require('cors');
 
+const Database = require('better-sqlite3');
+
 // Creamos el servidor
 const server = express();
 //Configurador motor de plantillas ejs
@@ -16,6 +18,9 @@ server.set('view engine', 'ejs');
 // Configuramos el servidor
 server.use(cors());
 server.use(express.json({ limit: '25mb' }));
+
+// URL nueva base de datos
+const db = new Database('./src/db/database.db', { verbose: console.log });
 
 // Arrancamos el servidor en el puerto 4000
 const serverPort = 4000;
@@ -59,6 +64,8 @@ server.get('/card/:id', (req, res) => {
   res.render('card', userCard);
   console.log(userCard);
 });
+
+//// NO NOS RENDERIZA NADA DE NADA
 
 //FALTA POR AÑADIR ERROR TAMAÑO FOTO
 
