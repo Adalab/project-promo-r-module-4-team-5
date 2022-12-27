@@ -1,9 +1,9 @@
 // Fichero src/index.js
 
 //random number para el id
-const randomId = () => {
-  return Math.random();
-};
+// const randomId = () => {
+//   return Math.random();
+// };
 // Importamos los dos módulos de NPM necesarios para trabajar
 const express = require('express');
 const cors = require('cors');
@@ -23,7 +23,7 @@ server.use(express.json({ limit: '25mb' }));
 const db = new Database('./src/db/database.db', { verbose: console.log });
 
 // Arrancamos el servidor en el puerto 4000
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -46,17 +46,35 @@ server.post('/card', (req, res) => {
     res.json(responseError);
   } else {
     const newCard = {
-      id: randomId(),
+      // id: randomId(),
       ...req.body,
     };
-    savedCards.push(newCard);
+    // savedCards.push(newCard);
+    //INSERT
+    const insertStn = db.prepare(
+      'INSERT INTO card (palette, name, email, image, phone, linkedin, github, job) VALUES (?,?,?,?,?,?,?,?)'
+    );
+    const result = insertStn.run(
+      newCard.palette,
+      newCard.name,
+      newCard.email,
+      newCard.photo,
+      newCard.phone,
+      newCard.linkedin,
+      newCard.github,
+      newCard.job
+    );
+    console.log(result);
+    //PROBARLO EN POSTMAN
+    //AÑADIRLE LASTINSERTROWID
     const responseSuccess = {
-      cardURL: `http://localhost:4000/card/${newCard.id}`,
+      cardURL: `https://project-promo-r-module-4-team-5-production.up.railway.app/card/${result.lastInsertRowid}`,
       success: true,
     };
     res.json(responseSuccess);
   }
 });
+<<<<<<< HEAD
 
 server.get('/card/:cardId', (req, res) => {
   console.log(req.params);
@@ -71,6 +89,14 @@ server.get('/card/:cardId', (req, res) => {
   //   linkedin: req.params.linkedin,
   //   github: req.params.github,
   // });
+=======
+server.get('/card/:id', (req, res) => {
+  const id = req.params.id;
+  const query = db.prepare('SELECT * FROM card WHERE id = ?');
+  const userCard = query.get(id);
+  res.render('card', userCard);
+  console.log(userCard);
+>>>>>>> nayra
 });
 
 //// NO NOS RENDERIZA NADA DE NADA
@@ -79,6 +105,7 @@ server.get('/card/:cardId', (req, res) => {
 
 const staticServerPathWeb = './src/public-react';
 server.use(express.static(staticServerPathWeb));
+<<<<<<< HEAD
 
 // Endpoint para gestionar los errores 404
 server.get('*', (req, res) => {
@@ -90,3 +117,5 @@ server.get('*', (req, res) => {
   );
   res.status(404).sendFile(notFoundFileAbsolutePath);
 });
+=======
+>>>>>>> nayra
