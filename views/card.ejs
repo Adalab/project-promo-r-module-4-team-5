@@ -27,21 +27,21 @@
                         <%= job %>
                     </p>
                 </div>
-                <!-- <div class="card__article--photo js__profile-image" style="background-image: url(" <%=photo %>");">
-                </div> -->
                 <div><img class="newCard__img" src="<%= photo %>"></img></div>
 
                 <nav class="card__article--links">
-                    <a href="<%= phone %>" class="preview-icon js-preview-phone">
+                    <a href="tel:<%= phone %>" class="preview-icon js-preview-phone">
                         <i class="fa-solid fa-mobile-screen-button icon"></i>
                     </a>
-                    <a href="<%= email %>" class="preview-icon js-preview-email">
+                    <a href="mailto:<%= email %>" target="_blank" class="preview-icon js-preview-email">
                         <i class="fa-regular fa-envelope icon"></i>
                     </a>
-                    <a href="<%= linkedin %>" class="preview-icon js-preview-linkedin" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/<%= linkedin %>" class="preview-icon js-preview-linkedin"
+                        target="_blank" rel="noreferrer">
                         <i class="fa-brands fa-linkedin-in icon"></i>
                     </a>
-                    <a href="<%= github %>" class="preview-icon js-preview-github" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/<%= github %>" class="preview-icon js-preview-github" target="_blank"
+                        rel="noreferrer">
                         <i class="fa-brands fa-github-alt icon"></i>
                     </a>
                 </nav>
