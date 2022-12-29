@@ -17,9 +17,9 @@ y aquí puedes acceder al proyecto final: https://project-promo-r-module-4-team-
 
 Este proyecto se dividió en dos módulos:
 
-- En el módulo 3 recibimos código heredado de nuestras compañeras del equipo 4 del módulo 2, y tuvimos que refactorizar su código usando React, separando en componentes. (añadir link a nuestro repo del modulo 3).
+- En el **módulo 3** recibimos **código heredado** de nuestras compañeras del equipo 4 del módulo 2, y tuvimos que **refactorizar** su código usando **React**, separando en **componentes**. Puedes ver nuestro repositorio del módulo 3 [aquí](https://github.com/Adalab/project-promo-r-module-3-team-5).
 
-- En el módulo 4 nos enfocamos en consolidar nuestro aprendizaje de Node JS, Express JS, SQL y trabajar con servidores, bases de datos y APIs.
+- En el **módulo 4** nos enfocamos en consolidar nuestro aprendizaje de Node JS, Express JS, SQL y trabajar con servidores, bases de datos y APIs.
 
 El objetivo al terminar ambos módulos era ser capaces de poner en producción un proyecto completo, tanto front end como back end.
 
@@ -53,11 +53,15 @@ El proyecto tiene 2 páginas:
 
 - Una sección de "Rellena" para que la usuaria añada sus datos personales ![rellena](https://user-images.githubusercontent.com/97313204/209992452-b065e406-973e-4d6f-9e42-2eecc014da57.png)
 
-- Una sección de comparte para generar la tarjeta con el botón de "crear tarjeta"
+- Una sección de comparte para generar la tarjeta con el botón de "crear tarjeta" ![coparte](https://user-images.githubusercontent.com/97313204/210005726-611dd7bd-5480-47fe-8f88-7e422efbd610.png)
 
-- En la que aparecerá un mensaje de error en caso de que la usuaria no haya rellenado todos los campos obligatorios
+- En la que aparecerá un mensaje de error en caso de que la usuaria no haya rellenado todos los campos obligatorios ![rellenatodo](https://user-images.githubusercontent.com/97313204/210005786-8bbcf365-7751-4f40-9b9f-e15799cdba60.png)
 
-- O
+- O se mostrará el link generado a la tarjeta y un botón para compartir la tarjeta en Twitter ![compartelinktwitter](https://user-images.githubusercontent.com/97313204/210005847-795f0af7-3aaf-4b09-859d-04c91c03bca0.png)
+
+- El link lleva a una página con la tarjeta, y el botón de twitter lleva directamente a un tweet formateado que la usuaria puede modificar a su gusto ![tweet](https://user-images.githubusercontent.com/97313204/210005951-5bd63ee4-604b-4d39-80bc-ba0f2d2971b2.png)
+
+- Por último, en la página principal además de una preview de cómo está quedando la tarjeta, también hay un botón de reset en el que la usuaria puede hacer click para eliminar todos sus datos y empezar desde cero si lo desea ![resetypreview](https://user-images.githubusercontent.com/97313204/210006045-d95f1022-9e43-4022-9676-dcc9c4d5526e.png)
 
 ## Cómo utilizar este proyecto en tu ordenador
 
@@ -114,4 +118,4 @@ En la raíz del proyecto:
 
 > Acuérdate de que estamos usando Railway como servidor, así que tendrás que cambiar algunas líneas del código en el back y en el front a http://localhost:4000 para ver los cambios.
 
-adiçós
+¡Gracias por leernos y esperamos que este proyecto te ayude!
