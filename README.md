@@ -51,10 +51,12 @@ El proyecto tiene 2 páginas:
 
 - Diferentes colapsables, el primero siendo **"Diseña"**, que permite seleccionar los **colores de la tarjeta** ![diseña](https://user-images.githubusercontent.com/97313204/209986297-dcc0eb86-6ebb-46ed-96ed-4f9f57ad0d10.png)
 
-- Una sección de **"Rellena"** para que la usuaria añada sus **datos personales** 
+- Una sección de **"Rellena"** para que la usuaria añada sus **datos personales** que luego se verán reflejados en la preview de la tarjeta
+
   ![rellena](https://user-images.githubusercontent.com/97313204/209992452-b065e406-973e-4d6f-9e42-2eecc014da57.png)
 
-- Una sección de **"comparte"** para generar la tarjeta con el botón de **"crear tarjeta"**
+- Una sección de **"comparte"** con un botón de **"crear tarjeta"** para generar la tarjeta que luego la usuaria podrá compartir
+
   ![coparte](https://user-images.githubusercontent.com/97313204/210005726-611dd7bd-5480-47fe-8f88-7e422efbd610.png)
 
 - Al hacer click en "crear tarjeta" aparecerá un **mensaje de error** en caso de que la usuaria no haya rellenado todos los campos obligatorios ![rellenatodo](https://user-images.githubusercontent.com/97313204/210005786-8bbcf365-7751-4f40-9b9f-e15799cdba60.png)
