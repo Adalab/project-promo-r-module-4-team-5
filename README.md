@@ -55,7 +55,7 @@ El proyecto tiene 2 páginas:
 
   ![rellena](https://user-images.githubusercontent.com/97313204/209992452-b065e406-973e-4d6f-9e42-2eecc014da57.png)
 
-- Una sección de **"comparte"** con un botón de **"crear tarjeta"** para generar la tarjeta que luego la usuaria podrá compartir
+- Una sección de **"Comparte"** con un botón de **"Crear tarjeta"** para generar la tarjeta que luego la usuaria podrá compartir
 
   ![coparte](https://user-images.githubusercontent.com/97313204/210005726-611dd7bd-5480-47fe-8f88-7e422efbd610.png)
 
