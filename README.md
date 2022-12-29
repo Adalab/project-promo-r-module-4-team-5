@@ -49,17 +49,17 @@ El proyecto tiene 2 páginas:
 
 - Una **página para crear las tarjetas** ![paginaprincipal](https://user-images.githubusercontent.com/97313204/209985462-56213da5-babd-40fb-95af-8daecd91812a.png)
 
-- Diferentes secciones de colapsables, la primera siendo **"Diseña"**, que permite seleccionar los **colores de la tarjeta** ![diseña](https://user-images.githubusercontent.com/97313204/209986297-dcc0eb86-6ebb-46ed-96ed-4f9f57ad0d10.png)
+- Diferentes colapsables, el primero siendo **"Diseña"**, que permite seleccionar los **colores de la tarjeta** ![diseña](https://user-images.githubusercontent.com/97313204/209986297-dcc0eb86-6ebb-46ed-96ed-4f9f57ad0d10.png)
 
 - Una sección de **"Rellena"** para que la usuaria añada sus **datos personales** ![rellena](https://user-images.githubusercontent.com/97313204/209992452-b065e406-973e-4d6f-9e42-2eecc014da57.png)
 
 - Una sección de **"comparte"** para generar la tarjeta con el botón de **"crear tarjeta"** ![coparte](https://user-images.githubusercontent.com/97313204/210005726-611dd7bd-5480-47fe-8f88-7e422efbd610.png)
 
-- En esta última sección, al hacer click en "crear tarjeta" aparecerá un **mensaje de error** en caso de que la usuaria no haya rellenado todos los campos obligatorios ![rellenatodo](https://user-images.githubusercontent.com/97313204/210005786-8bbcf365-7751-4f40-9b9f-e15799cdba60.png)
+- Al hacer click en "crear tarjeta" aparecerá un **mensaje de error** en caso de que la usuaria no haya rellenado todos los campos obligatorios ![rellenatodo](https://user-images.githubusercontent.com/97313204/210005786-8bbcf365-7751-4f40-9b9f-e15799cdba60.png)
 
 - En caso de que todo esté bien, se mostrará el **link generado a la tarjeta** y un botón para compartir la tarjeta en **Twitter** ![compartelinktwitter](https://user-images.githubusercontent.com/97313204/210005847-795f0af7-3aaf-4b09-859d-04c91c03bca0.png)
 
-- El **link** lleva a una página con la tarjeta y se puede **compartir** en **diferentes redes sociales**, y el botón de twitter lleva directamente a un tweet formateado con un **mensaje predeterminado** que la usuaria puede modificar a su gusto ![tweet](https://user-images.githubusercontent.com/97313204/210005951-5bd63ee4-604b-4d39-80bc-ba0f2d2971b2.png)
+- El **link** lleva a una página con la tarjeta y el botón de twitter lleva directamente a un tweet formateado con un **mensaje predeterminado** que la usuaria puede modificar a su gusto ![tweet](https://user-images.githubusercontent.com/97313204/210005951-5bd63ee4-604b-4d39-80bc-ba0f2d2971b2.png)
 
 - Por último, en la página principal además de una **preview** para que la usuaria pueda ver cómo está quedando la tarjeta, también hay un **botón de reset** en el que la usuaria puede hacer click para eliminar todos sus datos y empezar desde cero si lo desea ![resetypreview](https://user-images.githubusercontent.com/97313204/210006045-d95f1022-9e43-4022-9676-dcc9c4d5526e.png)
 
