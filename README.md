@@ -59,9 +59,13 @@ El proyecto tiene 2 páginas:
 
   ![coparte](https://user-images.githubusercontent.com/97313204/210005726-611dd7bd-5480-47fe-8f88-7e422efbd610.png)
 
-- Al hacer click en "crear tarjeta" aparecerá un **mensaje de error** en caso de que la usuaria no haya rellenado todos los campos obligatorios ![rellenatodo](https://user-images.githubusercontent.com/97313204/210005786-8bbcf365-7751-4f40-9b9f-e15799cdba60.png)
+- Al hacer click en "crear tarjeta" aparecerá un **mensaje de error** en caso de que la usuaria no haya rellenado todos los campos obligatorios
+  
+  ![rellenatodo](https://user-images.githubusercontent.com/97313204/210005786-8bbcf365-7751-4f40-9b9f-e15799cdba60.png)
 
-- En caso de que todo esté bien, se mostrará el **link generado a la tarjeta** y un botón para compartir la tarjeta en **Twitter** ![compartelinktwitter](https://user-images.githubusercontent.com/97313204/210005847-795f0af7-3aaf-4b09-859d-04c91c03bca0.png)
+- En caso de que todo esté bien, se mostrará el **link generado a la tarjeta** y un botón para compartir en **Twitter** 
+ 
+ ![compartelinktwitter](https://user-images.githubusercontent.com/97313204/210005847-795f0af7-3aaf-4b09-859d-04c91c03bca0.png)
 
 - El **link** lleva a una página con la tarjeta y el botón de twitter lleva directamente a un tweet formateado con un **mensaje predeterminado** que la usuaria puede modificar a su gusto ![tweet](https://user-images.githubusercontent.com/97313204/210005951-5bd63ee4-604b-4d39-80bc-ba0f2d2971b2.png)
 
